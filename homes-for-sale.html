@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Huizen aanbod</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon64.png" />
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style/website.css'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='style/image-style.css'> -->
+    
+</head>
+<body>    
+
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a class="current-page" href="Homes-for-sale.html">Aanbod huizen</a></li>        
+        <li><a href="aboutus.html">Over ons</a></li>
+        <li><a href="contact.html" >Contact</a></li>
+      </ul>
+  
+  
+  
+
+    <h1>Aanbod huizen</h1>
+    
+    <p>
+        Klik op foto van een huis om een grotere foto van gekozen huis te bekijken.
+    </p>
+
+    <p>
+        <table class="homes-table homes-table-2"  >
+            <tr>
+                <th>Huis adres</th>
+                <th>Grootte (m2)</th>
+                <th>Prijs (euro)</th>
+                <th>Foto van huis</th>
+            </tr>
+            <tr>
+                <td>Kerklaan 10 A</td>
+                <td>140</td>
+                <td>325.000</td>
+                <td>
+                    <img src="img/281_2160.jpg" width="150px" id="myImg1" onmousedown="OpenImage('myImg1')"  />
+                </td>
+            </tr>
+            <tr>
+                <td>Dorpsweg 82</td>
+                <td>196</td>
+                <td>595.000</td>
+                <td>
+                    <img src="img/home2.jpg" width="150px" id="myImg2" onmousedown="OpenImage('myImg2')" />
+                </td>
+            </tr>
+            <tr>
+                <td>Richard Straussring 7</td>
+                <td>205</td>
+                <td>1.195.000</td>
+                <td>
+                    <img src="img/363_1080x720.jpg" width="150px" id="myImg3"  onmousedown="OpenImage('myImg3')" />
+                </td>
+            </tr>
+        </table>
+    </p>
+
+
+    <!-- The Modal om grotere foto van een huis te laten zien -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+
+ 
+
+  <script>
+    function OpenImage (imageId) {
+        // Get the modal
+        var modal = document.getElementById("myModal");
+    
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById(imageId);
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+        }
+    
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+    
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+        modal.style.display = "none";
+        }
+    }
+  </script>
+
+</body>
+</html>

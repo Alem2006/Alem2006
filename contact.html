@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Contact</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon64.png" />
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style/website.css'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='style/contact.css'> -->
+    
+</head>
+<body>
+
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="Homes-for-sale.html">Aanbod huizen</a></li>        
+      <li><a href="aboutus.html">Over ons</a></li>
+      <li><a class="current-page" a href="contact.html" >Contact</a></li>
+    </ul>
+
+    <br />
+
+
+    <div class="container">
+      <form onsubmit="return false" name="myForm">
+
+        <label for="fname">Voornaam</label>
+        <input type="text" id="fname" name="voornaam" placeholder="Voornaam..">
+
+        <label for="fname">Tussenvoegsel</label>
+        <input type="text" id="fname" name="tussenvoegsel" placeholder="tussenvoegsel..">
+    
+        <label for="lname">Achternaam</label>
+        <input type="text" id="lname" name="achternaam" placeholder="Achternaam..">
+    
+        <label for="email">E-Mail</label>
+        <input type="text" id="email" name="email" placeholder="E-Mail..">
+
+        
+        <label for="country">Land waar u momenteel verblijft</label>
+        <select id="country" name="land waar u momenteel woont">
+          <option value="australië">Australië</option>
+          <option value="belgië">België</option>
+          <option value="bosnië">Bosnië</option>
+          <option value="canada">Canada</option>
+          <option value="duitsland">Duitsland</option>
+          <option value="ierland">Ierland</option>
+          <option value="luxemburg">Luxemburg</option>
+          <option value="monaco">Monaco</option>
+          <option value="marokko">Marokko</option>
+          <option value="nederland">Nederland</option>
+          <option value="nederlandse anillen">Nederlandse Antillen</option>
+          <option value="polen">Polen</option>
+          <option value="suriname">Suriname</option>
+          <option value="turkije">Turkije</option>
+          <option value="VK">VK</option>
+          <option value="VS">VS</option>
+        </select>
+    
+        <label for="Opmerking">Opmerking</label>
+        <textarea id="Opmrtking" name="Opmerking" placeholder="Vertel uw opmerking.." style="height:200px"></textarea>
+    
+        
+        <button name="Submit" onclick="SendMail()" >Verzend</button>
+    
+      </form>
+    </div>
+
+      <script>
+        function SendMail() {          
+          document.myForm.reset();
+          
+        }
+
+      </script>
