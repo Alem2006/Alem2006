@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Vacatures</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon64.png" />
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style/website.css'>
+    
+    <!-- jquery link op web -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  
+    <ul class="menu">
+      <li class="menu"><a href="home.html">Home</a></li>
+      <li class="menu"><a href="Homes-for-sale.html">Aanbod huizen</a></li>        
+      <li class="menu"><a href="aboutus.html">Over ons</a></li>
+      <li class="menu"><a href="contact.html" >Contact</a></li>
+      <li class="menu current-page"><a href="Vacancies.html" >Vacatures</a></li>      
+    </ul>
+  
+    <h1>Vacatures</h1>
+    Klik op een vacature voor meer informatie!
+    <ul >
+      <li class="center-left vacature-button" id="vacature1">Een junior makelaar</li>
+      <li class="center-left vacature-button" id="vacature2">Een office manger</li>
+    </ul>
+
+  <div id="junior-makelaar" class="vacature hidden">
+    <h2>Junior makelaar</h2>
+    Wij zoeken een enthousiaste junior makelaar als collega die  ons team wil versterken.
+    <br />
+    De kandidaat heeft bij voorkeur een economische opleiding gevolgd. Het komt goed van pas als je naast Nederlands ook Engels goed spreekt.
+    <br />
+    Verder zoeken wij iemand die communactief is, rijbewijs heeft 
+    <br />
+    Wij bieden:
+    <ul>
+      <li class="center-left">Een goede salaris</li>
+      <li class="center-left">Jaarlijkse bonus 5%</li>
+      <li class="center-left">Een telefoon</li>
+      <li class="center-left">Een lease auto</li>
+      <li class="center-left">25 dagen vakantie</li>      
+    </ul>   
+    
+    <br />
+    Woon je in regio Den Bosch, ben je geinteresseerd in vastgoed markt, mail ons naar <a href="mailto:alemmrkalj@houseofgold.nl">Alem</a>.
+  </div>
+
+  <div id="office-manager" class="vacature hidden">
+    <h2>Office manager</h2>
+    Wij zoeken een enthousiaste office manager die  ons team wil versterken.
+    <br />
+    De kandiaat heeft graag contact met mensen, kan goed organiseren en dingen regelen. Goed om naast Nederlands ook het Engels goed te spreken.
+    <br />
+        
+    Wij bieden:
+    <ul>
+      <li class="center-left">Een goede salaris</li>
+      <li class="center-left">Jaarlijkse bonus 10%</li>
+      <li class="center-left">Een telefoon</li>    
+      <li class="center-left">30 dagen vakantie</li>      
+    </ul>   
+    
+    <br />
+    Woon je in regio Den Bosch, ben je geinteresseerd in vastgoed markt, mail ons naar <a href="mailto:alemmrkalj@houseofgold.nl">Alem</a>.
+  </div>
+
+
+<script>
+  $("#vacature1").click(function(){
+    $("#office-manager").hide();
+    $("#junior-makelaar").toggle();
+  });
+
+  $("#vacature2").click(function(){
+    $("#junior-makelaar").hide();
+    $("#office-manager").toggle();
+  });
+
+</script>
+  
+  </body>
+  </html>  
